@@ -1,5 +1,8 @@
 def pridat_polozku(seznam):
     polozka = input("Zadej název položky k přidání:")
+    if len(polozka)<=0:
+        print("Název položky musí mít alespoň jeden znak.")
+        return 
     seznam.append(polozka)
     print(f"Položka {polozka} byla přidána.")
 
@@ -26,7 +29,6 @@ def zobrazit_seznam(seznam):
 
 def zobrazit_pocet_polozek(seznam):
     print(f"Aktuálně je v seznamu {len(seznam)} položek.")
-
 
 def main():
     seznam = []
@@ -55,7 +57,6 @@ def main():
             break
         else:
             print("Nejde, zadej znova.")
-
 
 if __name__ == "__main__":
     main()
